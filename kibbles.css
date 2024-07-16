@@ -1,0 +1,133 @@
+/* General styles */
+body {
+  font-family: Times New Roman;
+  background-color: green;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.calc {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+form {
+  margin: 20px 0;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn {
+  background-color: green;
+  border-color: green;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.popup h4 {
+  font-size: 1.5em;
+}
+
+.boldtext {
+  font-weight: bold;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .calc {
+    padding: 10px;
+    border: none;
+    box-shadow: none;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .form-control, button {
+    font-size: 0.9em;
+  }
+.supportme {
+    font-size: 0.8em;
+}
+    
+  .social-icons a {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 576px) {
+  .popup {
+    width: 90%;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,107 @@
+/* Ensure proper box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Times New Roman;
+  background-color: green;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+}
+
+.calc {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 20px auto;
+  
+}
+
+.price {
+  color: #888;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  margin: 10px 0;
+}
+.btn {
+  background-color: green;
+  border-color: green;
+}
+
+.supportme {
+  margin: 20px 0;
+  font-size: 0.9em;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  font-size: 1.5em;
+  color: #000;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+.boldtext {
+  font-weight: bold;
+}
+
+.popup-close {
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .calc {
+    padding: 15px;
+  }
+
+  input[type="number"], button {
+    font-size: 0.9em;
+  }
+
+  .supportme {
+    font-size: 0.8em;
+  }
+
+  .social-icons a {
+    font-size: 1.2em;
+  }
+}

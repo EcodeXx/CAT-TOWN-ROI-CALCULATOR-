@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Cat Town Calculator</title>
+  <link rel="shortcut icon" href="caticon.ico">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" href="kibbles.css">
+
+   <!-- Font Awesome CDN -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <img class="logo" src="logo.png" alt="logo">
+  </div>
+
+  <div class="container">
+    <div class="calc">
+      <h1>💸KIBBLE CALC💸</h1>
+      <br>
+    
+      <form>
+        <div class="mb-3">
+          <label class="form-label">Wallet $KIBBLE holdings:</label>
+          <input type="number" class="form-control" id="kibbleowned" value="0">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">How many cats you own:</label>
+          <input type="number" class="form-control" id="catsowned" value="0">
+        </div>
+        <br>
+        <p class="text-center fw-bold">Update these values based on the treasury balance in the <a href="https://cat.town/?ref=3c743d3d4e3a353e353a6a3a693438693b3934393c38483d3e3b3d3e3f4d343c356a4f353d486a3d6a3f" target="_blank">game</a>.</p>
+        <div class="mb-3">
+          <label class="form-label">Treasury Circulating Cats:</label>
+          <input type="number" class="form-control" id="tcats" value="908700">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Treasury $KIBBLE Balance:</label>
+          <input type="number" class="form-control" id="tkibble" value="1500000">
+        </div>
+        
+      </form>
+
+
+      <button type="button" class="btn btn-success cal-btn" onclick="calculate(), triggerConfetti()">Calculate</button>
+
+
+      <h2 id="resultText" style="display: none;">Estimated 3-day $KIBBLE Yield ~<span id="result"></span></h2>
+
+      <div class="popup" id="popup">
+        <h4> 🎟️3-Days Tickets 🎟️</h4>
+        <br>
+        <h1 class="fw-centered"><span id="reward" class="boldtext"></span></h1>
+        <p class="fw-centered">(~<span id="price-info" class="boldtext">Loading USD value...</span>)</p>
+        <button class="btn btn-danger popup-close" onclick="closePopup()">Ok</button>
+      </div>
+
+      <a href="index.html" class="return-homepage"><button type="button" class="btn btn-dark back-btn">ROI Calculator</button></a>
+      <a href="https://cat.town/?ref=3c743d3d4e3a353e353a6a3a693438693b3934393c38483d3e3b3d3e3f4d343c356a4f353d486a3d6a3f" target="_blank"><button type="button" class="btn btn-primary play-btn">Play Now</button></a>
+    </div>
+
+
+    <p class="supportme">Support me by clicking "Play Now"</a> thank you!</p>
+
+    <!-- Font Awesome icons with links -->
+    <div class="social-icons">
+      <a href="https://t.me/WelcomeToCatTown"><i class="fab fa-telegram"></i></a>
+      <a href="https://x.com/CatTownBase"><i class="fab fa-twitter"></i></a>
+      <a href="https://discord.gg/cattown"><i class="fab fa-discord"></i></a>
+      <a href="https://docs.cat.town/"><i class="fas fa-book"></i></a>
+    </div>
+
+  </div>
+
+  
+  <!-- Include the canvas-confetti library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  
+  <script type="text/javascript" src="kibble.js"></script>
+</body>
+
+</html>
